@@ -1,4 +1,4 @@
-만들# Physical Activity & Health Promotion Lab website
+# Physical Activity & Health Promotion Lab website
 
 Static site for GitHub Pages. No build step.
 
