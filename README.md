@@ -2,7 +2,9 @@
 
 Static site for GitHub Pages. No build step.
 
-- `index.html`: the whole page (text, styles, publication list)
+- `index.html`: English page (default)
+- `ko/index.html`: Korean page (same layout; images are shared from `../images/`)
+- Each page has a language switch (한국어 / EN) in the top menu. When you change content, update both pages.
 - `images/`: member photos (240×240 JPG; professor 400×500)
 
 ## Publish on GitHub Pages
