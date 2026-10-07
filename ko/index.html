@@ -140,7 +140,7 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 /* team */
 .pi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px}
 .pi h3{font-size:1.6rem}
-.pi-photo{display:block;width:100%;max-width:220px;aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.pi-photo{display:block;width:100%;max-width:150px;aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-bottom:16px}
 .pi dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px;margin:0;font-size:.92rem}
 .pi dt{color:var(--muted)} .pi dd{margin:0}
 .groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 40px;margin-top:40px}
@@ -175,6 +175,11 @@ footer .muted{color:var(--muted)}
   .pi dl{grid-template-columns:90px minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.page{display:none;scroll-margin-top:200px}
+.page.on{display:block;animation:pgin .25s ease}
+@keyframes pgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+section.page{border-top:0}
+.nav nav a[aria-current="page"]{color:var(--accent);font-weight:600}
 </style>
 </head>
 <body>
@@ -194,7 +199,7 @@ footer .muted{color:var(--muted)}
 </header>
 
 <main id="top">
-  <div class="wrap hero" id="about">
+  <div class="wrap hero page" id="about">
     <p class="mono">경희대학교 신체활동과 건강증진 실험실</p>
     <h1>하루는 1,440분.<br>우리는 그 <em>움직임</em>을 측정합니다.</h1>
     <p class="lede">신체활동과 건강증진 실험실은 웨어러블 기기와 가속도계로 사람들의 하루 움직임을 정확하게 측정하는 방법을 연구하고, 그 측정값으로 신체활동·좌식행동·수면이 건강과 어떻게 연결되는지 밝힙니다. 측정이 정확해야 건강증진 처방도 정확해집니다.</p>
@@ -210,7 +215,7 @@ footer .muted{color:var(--muted)}
     </figure>
   </div>
 
-  <section id="research">
+  <section id="research" class="page">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="mono">Research</p><h2>연구 분야</h2></div>
@@ -257,7 +262,7 @@ footer .muted{color:var(--muted)}
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="page">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="mono">Projects</p><h2>연구 과제</h2></div>
@@ -286,7 +291,7 @@ footer .muted{color:var(--muted)}
     </div>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="page">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="mono">Publications</p><h2>논문</h2></div>
@@ -325,7 +330,7 @@ footer .muted{color:var(--muted)}
     </div>
   </section>
 
-  <section id="team">
+  <section id="team" class="page">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="mono">Team</p><h2>구성원</h2></div>
@@ -359,7 +364,7 @@ footer .muted{color:var(--muted)}
     </div>
   </section>
 
-  <section id="notice">
+  <section id="notice" class="page">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="mono">Notice</p><h2>소식</h2></div>
@@ -479,6 +484,25 @@ footer .muted{color:var(--muted)}
   }
   document.getElementById('pub-q').addEventListener('input',e=>{state.q=e.target.value;render()});
   render();
+})();
+</script>
+<script>
+(function(){
+  const ids=['about','research','projects','publications','team','notice'];
+  const links=[...document.querySelectorAll('.nav nav a[href^="#"]')];
+  function show(){
+    let id=location.hash.slice(1);
+    if(!ids.includes(id)) id='about';
+    ids.forEach(i=>document.getElementById(i).classList.toggle('on',i===id));
+    links.forEach(a=>a.getAttribute('href')==='#'+id?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+    window.scrollTo(0,0);
+    if(id==='about') window.dispatchEvent(new Event('resize'));
+  }
+  document.querySelector('.brand').setAttribute('href','#about');
+  window.addEventListener('hashchange',show);
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  show();
+  window.addEventListener('load',()=>window.scrollTo(0,0));
 })();
 </script>
 </body>
