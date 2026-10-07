@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PAHP Lab · Kyung Hee</title>
+<title>연구 · PAHP Lab · 경희대학교</title>
 <meta name="description" content="Physical Activity & Health Promotion Lab, Department of Physical Education, Kyung Hee University. Wearable measurement, 24-hour movement behaviors, and physical activity epidemiology.">
-<meta property="og:title" content="Physical Activity & Health Promotion Lab">
+<meta property="og:title" content="경희대학교 신체활동과 건강증진 실험실">
 <meta property="og:description" content="Kyung Hee University · Wearable measurement, 24-hour movement behaviors, and physical activity epidemiology.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/jung-min-lee.jpg">
+<meta property="og:image" content="../images/jung-min-lee.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -182,101 +182,89 @@ main>section{border-top:0}
 <body>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html"><img class="seal seal-l" src="images/khu-seal-red.png" alt="Kyung Hee University seal"><img class="seal seal-d" src="images/khu-seal-silver.png" alt=""><span class="brand-t"><b>PA &amp; Health Promotion Lab</b><span>Kyung Hee University</span></span></a>
-    <nav aria-label="Main menu"><ul>
-      <li><a href="index.html" aria-current="page">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="ko/index.html" lang="ko" class="lang">한국어</a></li>
+    <a class="brand" href="index.html"><img class="seal seal-l" src="../images/khu-seal-red.png" alt="경희대학교 휘장"><img class="seal seal-d" src="../images/khu-seal-silver.png" alt=""><span class="brand-t"><b>신체활동과 건강증진 실험실</b><span>Physical Activity &amp; Health Promotion Lab</span></span></a>
+    <nav aria-label="주요 메뉴"><ul>
+      <li><a href="index.html">소개</a></li>
+      <li><a href="research.html" aria-current="page">연구</a></li>
+      <li><a href="projects.html">과제</a></li>
+      <li><a href="publications.html">논문</a></li>
+      <li><a href="team.html">구성원</a></li>
+      <li><a href="news.html">소식</a></li>
+      <li><a href="../research.html" lang="en" class="lang">EN</a></li>
     </ul></nav>
   </div>
 </header>
 
 <main id="top">
-  <div class="wrap hero" id="about">
-    <p class="mono">Physical Activity &amp; Health Promotion Lab · Kyung Hee University</p>
-    <h1>A day has 1,440 minutes.<br>We measure how people <em>move</em> through them.</h1>
-    <p class="lede">The Physical Activity &amp; Health Promotion Lab develops accurate ways to measure everyday movement with wearable devices and accelerometers, then uses those measurements to show how physical activity, sedentary behavior, and sleep relate to health. Better measurement leads to better health promotion.</p>
-
-    <figure class="day" aria-label="Example of activity intensity across a 1,440-minute day recorded by an accelerometer">
-      <div class="day-head">
-        <span class="mono">Fig. 1 · One 24-hour accelerometer record (example data)</span>
-        <span class="mono">epoch = 60 s · n = 1,440</span>
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="mono">Research</p><h2>연구 분야</h2></div>
+        <p>측정 방법론에서 출발해 인구집단 건강 연구와 스포츠 데이터 분석으로 이어집니다. 모든 주제의 공통 질문은 "이 측정값을 얼마나 믿을 수 있는가"입니다.</p>
       </div>
-      <canvas id="actogram" role="img" aria-label="Bar chart of sleep, sedentary, light, and moderate-to-vigorous activity by time of day"></canvas>
-      <div class="axis"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
-      <div class="legend" id="legend"></div>
-    </figure>
-  </div>
+      <div class="themes">
+        <article class="theme">
+          <span class="mono">Measurement validity</span>
+          <h3>웨어러블 기기 타당도·신뢰도</h3>
+          <p>소비자용 활동량계, 스마트워치, 스마트폰이 측정한 걸음 수, 에너지 소비량, 수면을 기준 측정법과 비교합니다. 검증 연구의 분석·보고 표준화 작업에도 참여해 왔습니다.</p>
+          <div class="tags"><span>Fitbit</span><span>ActiGraph</span><span>스마트폰 보정</span><span>Bland–Altman</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Population health</span>
+          <h3>신체활동 역학</h3>
+          <p>국민건강영양조사, 한국인유전체역학조사(KoGES), 건강보험 노인코호트, 한국아동·청소년패널 등 국가 자료로 신체활동과 만성질환, 인지기능, 골절, 사망의 관련성을 연구합니다.</p>
+          <div class="tags"><span>KNHANES</span><span>KoGES</span><span>NHIS</span><span>KCYPS</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">24-hour behaviors</span>
+          <h3>24시간 움직임 행동과 일주기 리듬</h3>
+          <p>신체활동, 좌식시간, 수면을 하나의 하루로 묶어 봅니다. 가속도계 원자료로 활동 리듬과 수면 타이밍 지표를 산출하고 건강노화와의 관련성을 분석합니다.</p>
+          <div class="tags"><span>일주기 리듬</span><span>social jetlag</span><span>건강노화</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">스포츠 데이터 분석</span>
+          <h3>스포츠 데이터 분석</h3>
+          <p>프로야구 세이버메트릭스, 테니스 경기 기록, 스포츠 관심도 데이터를 측정평가 관점에서 분석합니다. 데이터 품질과 지표 신뢰도를 먼저 따집니다.</p>
+          <div class="tags"><span>KBO</span><span>MLB</span><span>테니스</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Fitness assessment</span>
+          <h3>체력 측정과 예측식 개발</h3>
+          <p>최대심박수, 최대산소섭취량, 에너지 소비량 예측식을 교차타당화로 개발하고, 경찰공무원 체력검사 같은 현장 검사 도구를 설계합니다.</p>
+          <div class="tags"><span>VO₂max</span><span>K-fold CV</span><span>체력검사</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Reliability methods</span>
+          <h3>일반화가능도 이론과 D-study</h3>
+          <p>며칠, 몇 주를 관찰해야 안정적인 추정치를 얻을 수 있는지 G-theory로 분해합니다. 청소년 Fitbit 자료, 선수 웨어러블 데이터, 경기 기록 데이터에 적용합니다.</p>
+          <div class="tags"><span>G-theory</span><span>D-study</span><span>분산성분</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
     <div>
-      <img class="seal-foot seal-l" src="images/khu-seal-red-full.png" alt="Kyung Hee University"><img class="seal-foot seal-d" src="images/khu-seal-silver-full.png" alt="">
-      <p><b style="font-family:var(--f-display)">PA &amp; Health Promotion Lab</b></p>
-      <p class="muted">Department of Physical Education, College of Physical Education, Kyung Hee University</p>
-      <p class="muted">Director: Prof. Jung-Min Lee</p>
+      <img class="seal-foot seal-l" src="../images/khu-seal-red-full.png" alt="경희대학교"><img class="seal-foot seal-d" src="../images/khu-seal-silver-full.png" alt="">
+      <p><b style="font-family:var(--f-display)">신체활동과 건강증진 실험실</b></p>
+      <p class="muted">경희대학교 체육대학 체육학과</p>
+      <p class="muted">지도교수 이정민</p>
     </div>
     <div>
-      <p class="mono">Contact</p>
+      <p class="mono">연락처</p>
       <p>jungminlee@khu.ac.kr</p>
       <p>031-201-2736</p>
     </div>
     <div>
-      <p class="mono">Location</p>
-      <p class="muted">Room 413, College of Physical Education, Kyung Hee University Global Campus</p>
-      <p class="muted">1732 Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do 17104, Republic of Korea</p>
+      <p class="mono">위치</p>
+      <p class="muted">경희대학교 국제캠퍼스 체육대학 413호</p>
+      <p class="muted">경기도 용인시 기흥구 덕영대로 1732, 17104</p>
     </div>
   </div>
 </footer>
 
-<script>
-(function(){
-  // Synthetic 1,440-minute day (illustrative only): sleep 00:00–06:30 and 23:30–24:00,
-  // walking commute, desk work, lunch walk, evening exercise.
-  function rand(s){return function(){s=(s*16807)%2147483647;return (s-1)/2147483646}}
-  const r=rand(42), counts=[];
-  for(let m=0;m<1440;m++){
-    let c;
-    if(m<390||m>=1410) c=r()<0.06?r()*120:r()*15;                 // sleep
-    else if((m>=470&&m<500)||(m>=1080&&m<1110)) c=1900+r()*2400;     // commute walk
-    else if(m>=740&&m<770) c=1500+r()*1800;                          // lunch walk
-    else if(m>=1170&&m<1215) c=3000+r()*4000;                        // evening exercise
-    else c=r()<0.18?150+r()*1500:r()*90;                             // desk / home
-    counts.push(Math.round(c));
-  }
-  // Freedson (1998) adult cut-points, counts/min
-  const cls=(m,c)=>(m<390||m>=1410)?'sleep':c<100?'sed':c<1952?'lpa':'mvpa';
-  const tally={sleep:0,sed:0,lpa:0,mvpa:0};
-  counts.forEach((c,m)=>tally[cls(m,c)]++);
 
-  const cv=document.getElementById('actogram'), ctx=cv.getContext('2d');
-  function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
-  function draw(){
-    const dpr=window.devicePixelRatio||1, w=cv.clientWidth, h=cv.clientHeight;
-    cv.width=w*dpr; cv.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
-    const col={sleep:css('--sleep'),sed:css('--sed'),lpa:css('--lpa'),mvpa:css('--mvpa')};
-    const max=Math.log10(7500), bw=w/1440;
-    ctx.strokeStyle=css('--line'); ctx.lineWidth=1;
-    [0.25,0.5,0.75].forEach(f=>{const x=Math.round(w*f)+.5;ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()});
-    counts.forEach((c,m)=>{
-      const k=cls(m,c), hh=k==='sleep'?h*0.12:Math.max(2,(Math.log10(c+10)/max)*h);
-      ctx.fillStyle=col[k]; ctx.fillRect(m*bw,h-hh,Math.max(bw,1),hh);
-    });
-  }
-  const names={sleep:'Sleep',sed:'Sedentary',lpa:'Light',mvpa:'MVPA'};
-  document.getElementById('legend').innerHTML=Object.keys(names).map(k=>
-    `<span><i style="background:var(--${k})"></i>${names[k]} <b>${tally[k]}</b> min</span>`).join('')
-    +'<span>Cut-points: Freedson (1998), adults</span>';
-  draw();
-  window.addEventListener('resize',draw);
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
-  new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-})();
-</script>
 </body>
 </html>

@@ -175,31 +175,28 @@ footer .muted{color:var(--muted)}
   .pi dl{grid-template-columns:90px minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-.page{display:none;scroll-margin-top:200px}
-.page.on{display:block;animation:pgin .25s ease}
-@keyframes pgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-section.page{border-top:0}
+main>section{border-top:0}
 .nav nav a[aria-current="page"]{color:var(--accent);font-weight:600}
 </style>
 </head>
 <body>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><img class="seal seal-l" src="../images/khu-seal-red.png" alt="경희대학교 휘장"><img class="seal seal-d" src="../images/khu-seal-silver.png" alt=""><span class="brand-t"><b>신체활동과 건강증진 실험실</b><span>Physical Activity &amp; Health Promotion Lab</span></span></a>
+    <a class="brand" href="index.html"><img class="seal seal-l" src="../images/khu-seal-red.png" alt="경희대학교 휘장"><img class="seal seal-d" src="../images/khu-seal-silver.png" alt=""><span class="brand-t"><b>신체활동과 건강증진 실험실</b><span>Physical Activity &amp; Health Promotion Lab</span></span></a>
     <nav aria-label="주요 메뉴"><ul>
-      <li><a href="#about">소개</a></li>
-      <li><a href="#research">연구</a></li>
-      <li><a href="#projects">과제</a></li>
-      <li><a href="#publications">논문</a></li>
-      <li><a href="#team">구성원</a></li>
-      <li><a href="#notice">소식</a></li>
-      <li><a href="../" lang="en" class="lang">EN</a></li>
+      <li><a href="index.html" aria-current="page">소개</a></li>
+      <li><a href="research.html">연구</a></li>
+      <li><a href="projects.html">과제</a></li>
+      <li><a href="publications.html">논문</a></li>
+      <li><a href="team.html">구성원</a></li>
+      <li><a href="news.html">소식</a></li>
+      <li><a href="../index.html" lang="en" class="lang">EN</a></li>
     </ul></nav>
   </div>
 </header>
 
 <main id="top">
-  <div class="wrap hero page" id="about">
+  <div class="wrap hero" id="about">
     <p class="mono">경희대학교 신체활동과 건강증진 실험실</p>
     <h1>하루는 1,440분.<br>우리는 그 <em>움직임</em>을 측정합니다.</h1>
     <p class="lede">신체활동과 건강증진 실험실은 웨어러블 기기와 가속도계로 사람들의 하루 움직임을 정확하게 측정하는 방법을 연구하고, 그 측정값으로 신체활동·좌식행동·수면이 건강과 어떻게 연결되는지 밝힙니다. 측정이 정확해야 건강증진 처방도 정확해집니다.</p>
@@ -214,168 +211,6 @@ section.page{border-top:0}
       <div class="legend" id="legend"></div>
     </figure>
   </div>
-
-  <section id="research" class="page">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="mono">Research</p><h2>연구 분야</h2></div>
-        <p>측정 방법론에서 출발해 인구집단 건강 연구와 스포츠 데이터 분석으로 이어집니다. 모든 주제의 공통 질문은 "이 측정값을 얼마나 믿을 수 있는가"입니다.</p>
-      </div>
-      <div class="themes">
-        <article class="theme">
-          <span class="mono">Measurement validity</span>
-          <h3>웨어러블 기기 타당도·신뢰도</h3>
-          <p>소비자용 활동량계, 스마트워치, 스마트폰이 측정한 걸음 수, 에너지 소비량, 수면을 기준 측정법과 비교합니다. 검증 연구의 분석·보고 표준화 작업에도 참여해 왔습니다.</p>
-          <div class="tags"><span>Fitbit</span><span>ActiGraph</span><span>스마트폰 보정</span><span>Bland–Altman</span></div>
-        </article>
-        <article class="theme">
-          <span class="mono">Population health</span>
-          <h3>신체활동 역학</h3>
-          <p>국민건강영양조사, 한국인유전체역학조사(KoGES), 건강보험 노인코호트, 한국아동·청소년패널 등 국가 자료로 신체활동과 만성질환, 인지기능, 골절, 사망의 관련성을 연구합니다.</p>
-          <div class="tags"><span>KNHANES</span><span>KoGES</span><span>NHIS</span><span>KCYPS</span></div>
-        </article>
-        <article class="theme">
-          <span class="mono">24-hour behaviors</span>
-          <h3>24시간 움직임 행동과 일주기 리듬</h3>
-          <p>신체활동, 좌식시간, 수면을 하나의 하루로 묶어 봅니다. 가속도계 원자료로 활동 리듬과 수면 타이밍 지표를 산출하고 건강노화와의 관련성을 분석합니다.</p>
-          <div class="tags"><span>일주기 리듬</span><span>social jetlag</span><span>건강노화</span></div>
-        </article>
-        <article class="theme">
-          <span class="mono">스포츠 데이터 분석</span>
-          <h3>스포츠 데이터 분석</h3>
-          <p>프로야구 세이버메트릭스, 테니스 경기 기록, 스포츠 관심도 데이터를 측정평가 관점에서 분석합니다. 데이터 품질과 지표 신뢰도를 먼저 따집니다.</p>
-          <div class="tags"><span>KBO</span><span>MLB</span><span>테니스</span></div>
-        </article>
-        <article class="theme">
-          <span class="mono">Fitness assessment</span>
-          <h3>체력 측정과 예측식 개발</h3>
-          <p>최대심박수, 최대산소섭취량, 에너지 소비량 예측식을 교차타당화로 개발하고, 경찰공무원 체력검사 같은 현장 검사 도구를 설계합니다.</p>
-          <div class="tags"><span>VO₂max</span><span>K-fold CV</span><span>체력검사</span></div>
-        </article>
-        <article class="theme">
-          <span class="mono">Reliability methods</span>
-          <h3>일반화가능도 이론과 D-study</h3>
-          <p>며칠, 몇 주를 관찰해야 안정적인 추정치를 얻을 수 있는지 G-theory로 분해합니다. 청소년 Fitbit 자료, 선수 웨어러블 데이터, 경기 기록 데이터에 적용합니다.</p>
-          <div class="tags"><span>G-theory</span><span>D-study</span><span>분산성분</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="page">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="mono">Projects</p><h2>연구 과제</h2></div>
-        <p>현재 진행 중인 연구와 주요 수행 과제입니다.</p>
-      </div>
-      <h3 class="sub">진행 중인 연구</h3>
-      <ul class="proj">
-        <li><span class="src">Wearable · G-theory</span><span>청소년 Fitbit 자료를 이용한 수면 타이밍·신체활동 측정의 신뢰도 분석</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Accelerometry</span><span>국민건강영양조사 가속도계 원자료 기반 일주기 활동 리듬 지표 개발</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Systematic review</span><span>웨어러블 활동량계 타당도 연구의 분석·보고 표준(Welk et al., 2019) 준수 현황</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Cohort · KoGES</span><span>누적 저항운동·유산소 신체활동과 사망의 관련성 (안산·안성 코호트)</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Cohort · NHIS</span><span>노인 여성의 골밀도 검진, 신체활동과 골절 위험</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Sports data</span><span>테니스 공개 경기기록 데이터의 일반화가능도 분석</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Panel · KCYPS</span><span>한국 청소년의 여가신체활동과 사회정서역량 궤적의 종단적 관계: 성별 층화 분석</span><span class="st on">진행 중</span></li>
-        <li><span class="src">PE · AI</span><span>체육교육 담당자의 AI 활용</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Exercise intensity · HR</span><span>설상과 실내 트레드밀 스키에서 회전 기술에 따른 운동강도 비교</span><span class="st on">진행 중</span></li>
-        <li><span class="src">Fitness norms · PAPS</span><span>초등학생 1~6학년 체력 백분위수 및 등급 기준 개발 (LMS 방법, 국민체력100 외부검증)</span><span class="st on">진행 중</span></li>
-      </ul>
-      <h3 class="sub">주요 수행 과제</h3>
-      <ul class="proj">
-        <li><span class="src">2021–2023 · 국민체육진흥공단</span><span>중소 스포츠용품 제조기업의 디지털 전환을 위한 스포츠 데이터 거래 기술 개발 (공동연구책임자)</span><span class="st done">완료</span></li>
-        <li><span class="src">2021–2022 · 국민체육진흥공단</span><span>홈트레이닝용 스마트 스포츠 기기 및 게이미피케이션 서비스 기술 개발 (공동연구책임자)</span><span class="st done">완료</span></li>
-        <li><span class="src">2019–2020</span><span>경찰공무원 체력검사 개발 (연구책임자)</span><span class="st done">완료</span></li>
-        <li><span class="src">2023–2024 · 경희대학교</span><span>Kyung Hee Fellow 연구지원</span><span class="st done">완료</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="publications" class="page">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="mono">Publications</p><h2>논문</h2></div>
-        <p>지금까지 게재된 논문 <b id="pub-total">100</b>편입니다. 아래 막대에서 연도를 누르면 그 해 논문만 볼 수 있습니다.</p>
-      </div>
-      <dl class="stats">
-        <div><dt>논문</dt><dd>100</dd></div>
-        <div><dt>피인용</dt><dd>3,793</dd></div>
-        <div><dt>H-index</dt><dd>28</dd></div>
-        <div><dt>연구 경력</dt><dd>20+</dd></div>
-      </dl>
-      <p class="mono" style="margin-top:8px">피인용·H-index 출처: Google Scholar, 2026년 10월 기준</p>
-      <h3 class="sub">대표 논문</h3>
-      <ol class="pubs">
-        <li><span class="yr">2026</span><div><p>AI 시대 스포츠 애널리틱스와 체육측정평가의 확장 가능성 및 과제</p><p class="au"><u>이정민*</u>.</p><p class="jr"><em>한국체육측정평가학회지</em> · <a href="https://doi.org/10.21797/ksme.2026.28.3.002" target="_blank" rel="noopener">doi:10.21797/ksme.2026.28.3.002</a></p></div></li>
-        <li><span class="yr">2026</span><div><p>Health benefits of family visits for older Korean women living alone.</p><p class="au">Hwang SJ, Hwang IW, Choe JP, Shen JH, <u>Lee JM*</u>.</p><p class="jr"><em>Family Relations</em> · <a href="https://doi.org/10.1111/fare.70220" target="_blank" rel="noopener">doi:10.1111/fare.70220</a></p></div></li>
-        <li><span class="yr">2026</span><div><p>Impact of physical activity and frailty on mortality and utilization among middle-aged and older adults in South Korea.</p><p class="au">Kim HJ, Hong KR, Wen XL, Kim DS, <u>Lee JM*</u>.</p><p class="jr"><em>The Journal of Frailty &amp; Aging</em> · <a href="https://doi.org/10.1016/j.tjfa.2026.100142" target="_blank" rel="noopener">doi:10.1016/j.tjfa.2026.100142</a></p></div></li>
-        <li><span class="yr">2026</span><div><p>Income as a moderator of physical activity's impact on mental health: Insights from the Korean Health Panel Study II.</p><p class="au">Hwang IW, Chung HY, Yang D, Lee HH, <u>Lee JM*</u>.</p><p class="jr"><em>Journal of Physical Activity and Health</em> · <a href="https://doi.org/10.1123/jpah.2025-0019" target="_blank" rel="noopener">doi:10.1123/jpah.2025-0019</a></p></div></li>
-        <li><span class="yr">2025</span><div><p>How does the weekend catch-up sleep ratio affect the health and lifestyle of Korean adults? An age- and sex-matched study.</p><p class="au">Hwang IW, Hwang SJ, Shen JH, Kim J, <u>Lee JM*</u>.</p><p class="jr"><em>Measurement in Physical Education and Exercise Science</em> · <a href="https://doi.org/10.1080/1091367X.2025.2460758" target="_blank" rel="noopener">doi:10.1080/1091367X.2025.2460758</a></p></div></li>
-      </ol>
-
-      <h3 class="sub" style="margin-top:48px">전체 논문</h3>
-      <div class="yearbars" id="yearbars" role="group" aria-label="연도별 논문 수"></div>
-      <div class="pub-tools">
-        
-        <label class="search"><span class="mono">검색</span><input id="pub-q" type="search" placeholder="제목, 저자, 저널"></label>
-      </div>
-      <p class="mono" id="pub-status" style="margin-top:14px"></p>
-      <p style="margin-top:6px;font-size:.85rem;color:var(--muted)"><b style="color:var(--ink)">*</b> 교신저자 논문 46편</p>
-      <div id="pub-list"></div>
-      <div class="links">
-        <a class="btn" href="https://www.researchgate.net/profile/Jung-Min-Lee" target="_blank" rel="noopener">ResearchGate ↗</a>
-        <a class="btn" href="https://scholar.google.com/citations?user=ffCzuqMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a class="btn" href="https://orcid.org/0000-0002-8033-0725" target="_blank" rel="noopener">ORCID ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="page">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="mono">Team</p><h2>구성원</h2></div>
-        <p>대학원 진학과 연구 참여에 관심 있는 학생은 언제든 연락 바랍니다.</p>
-      </div>
-      <div class="pi">
-        <div class="pi-id">
-          <img class="pi-photo" src="../images/jung-min-lee.jpg" alt="이정민 교수">
-          <p class="mono">지도교수</p>
-          <h3>이정민 교수</h3>
-                    <p style="margin-top:12px;font-size:.92rem">경희대학교 체육학과 교수</p>
-        </div>
-        <dl>
-          <dt>학력</dt><dd>Ph.D. Kinesiology, Iowa State University (2013)<br>M.S. Exercise Science, University of Tennessee (2008)<br>B.A. Leisure and Sports Studies, Korea University (2003)</dd>
-          <dt>경력</dt><dd>School of Health &amp; Kinesiology, University of Nebraska Omaha<br><span class="pos">조교수 (2013–2017)</span></dd>
-          <dt>학회 활동</dt><dd>한국체육측정평가학회 총무, 감사<br>Measurement in Physical Education and Exercise Science (MPEES) Section Editor</dd>
-          <dt>강의</dt><dd>신체활동역학조사, 체육측정평가, 체육통계학, 휘트니스 프로그램</dd>
-          <dt>수상</dt><dd>경희대학교 연구 Fellow (2022)</dd>
-        </dl>
-      </div>
-      <div class="groups">
-        <div class="group"><div class="g-head"><h3>박사후연구원</h3><span class="mono">Postdoc · 3</span></div>
-          <ul class="names"><li class="m"><img class="av" src="../images/seo-hyung-yang.jpg" alt="Seo-Hyung Yang"><span>양서형<small>스포츠 데이터 분석, 세이버메트릭스</small></span></li><li class="m"><span class="av" aria-hidden="true">한</span><span>한범석<small>장애 노인의 스포츠 참여</small></span></li><li class="m"><span class="av" aria-hidden="true">석</span><span>석진수</span></li></ul></div>
-        <div class="group"><div class="g-head"><h3>박사과정</h3><span class="mono">Ph.D. · 4</span></div>
-          <ul class="names"><li class="m"><img class="av" src="../images/hae-young-chung.jpg" alt="Hae-Young Chung"><span>정해영<small>디지털 미디어 사용과 아동 건강</small></span></li><li class="m"><img class="av" src="../images/jun-hao-shen.jpg" alt="Jun-Hao Shen"><span>신준호<small>신체활동과 심혈관대사 건강</small></span></li><li class="m"><span class="av" aria-hidden="true">온</span><span>온효림<small>유학생의 건강행동</small></span></li><li class="m"><img class="av" src="../images/in-sik-park.jpg" alt="In-Sik Park"><span>박인식<small>근골격계 질환 운동재활</small></span></li></ul></div>
-        <div class="group wide"><div class="g-head"><h3>석사과정</h3><span class="mono">M.S. · 7</span></div>
-          <ul class="names"><li class="m"><img class="av" src="../images/seung-yeon-song.jpg" alt="Seung-Yeon Song"><span>송승연<small>건강행동</small></span></li><li class="m"><img class="av" src="../images/se-ho-ahn.jpg" alt="Se-Ho Ahn"><span>안세호<small>신체활동과 일주기 리듬</small></span></li><li class="m"><img class="av" src="../images/hee-yang.jpg" alt="Hee Yang"><span>양희<small>스포츠 데이터 분석, 데이터 표준화</small></span></li><li class="m"><img class="av" src="../images/hyo-rim-ye.jpg" alt="Hyo-Rim Ye"><span>예효림<small>체육교육의 AI 활용</small></span></li><li class="m"><img class="av" src="../images/ji-yeon-kim.jpg" alt="Ji-Yeon Kim"><span>김지연<small>신체활동과 발레</small></span></li><li class="m"><img class="av" src="../images/eun-young-kim.jpg" alt="Eun-Young Kim"><span>김은영<small>노인 여성의 골 건강, 신체활동, 골절 위험</small></span></li><li class="m"><img class="av" src="../images/ri-ra-suh.jpg" alt="Ri-Ra Suh"><span>서리라<small>스키 운동강도</small></span></li></ul></div>
-        <div class="group wide alumni"><div class="g-head"><h3>졸업생</h3><span class="mono">Alumni · 13</span></div>
-          <ul class="names"><li class="m"><img class="av" src="../images/jeong-hui-park.jpg" alt="Jeong-Hui Park"><span>박정희 박사<small><span class="pos">조교수</span><br>University of Oklahoma</small></span></li><li class="m"><img class="av" src="../images/jisu-kim.jpg" alt="Jisu Kim"><span>김지수 박사<small><span class="pos">박사후연구원</span><br>Johns Hopkins University</small></span></li><li class="m"><img class="av" src="../images/ju-pil-choe.jpg" alt="Ju-Pil Choe"><span>최주필<small><span class="pos">박사과정</span><br>University of Mississippi</small></span></li><li class="m"><span class="av" aria-hidden="true">황</span><span>황인휘<small><span class="pos">박사과정</span><br>University of Illinois Chicago</small></span></li><li class="m"><img class="av" src="../images/soo-ji-hwang.jpg" alt="Soo-Ji Hwang"><span>황수지<small><span class="pos">박사과정</span><br>University of Nevada, Las Vegas</small></span></li><li class="m"><img class="av" src="../images/kyuri-hong.jpg" alt="Kyuri Hong"><span>홍규리<small><span class="pos">박사과정</span><br>Iowa State University</small></span></li><li class="m"><img class="av" src="../images/ju-won-chae.jpg" alt="Ju-Won Chae"><span>채주원<small><span class="pos">연구원</span><br>한국스포츠과학원</small></span></li><li class="m"><img class="av" src="../images/ho-jun-kim.jpg" alt="Ho-Jun Kim"><span>김호준<small><span class="pos">연구원</span><br>한국스포츠과학원</small></span></li><li class="m"><img class="av" src="../images/da-san-kim.jpg" alt="Da-San Kim"><span>김다산<small><span class="pos">수영코치</span><br>서울체육고등학교</small></span></li><li class="m"><img class="av" src="../images/hye-won-min.jpg" alt="Hye-Won Min"><span>민혜원<small><span class="pos">일무 이수자</span><br>국가무형문화재 종묘제례악</small></span></li><li class="m"><img class="av" src="../images/sei-jong-yang.jpg" alt="Sei-Jong Yang"><span>양세종<small><span class="pos">대표</span><br>Sequence Exercise Center</small></span></li><li class="m"><img class="av" src="../images/jae-su-yang.jpg" alt="Jae-Su Yang"><span>양재수<small><span class="pos">관장</span><br>강원헬스클럽</small></span></li><li class="m"><img class="av" src="../images/young-ju-kim.jpg" alt="Young-Ju Kim"><span>김영주<small><span class="pos">체육교사</span><br>평택 라온고등학교</small></span></li></ul></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="notice" class="page">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="mono">Notice</p><h2>소식</h2></div>
-        <p>연구 참여자 모집과 실험실 소식을 알립니다.</p>
-      </div>
-      <ul class="notice">
-        <li><time datetime="2026-10-06">2026.10.06</time><span>이정민 교수 100번째 논문 게재: 「AI 시대 스포츠 애널리틱스와 체육측정평가의 확장 가능성 및 과제」, 한국체육측정평가학회지 28(3)</span></li>
-        <li><time datetime="2026-10-06">2026.10.06</time><span>신체활동과 건강증진 실험실 홈페이지 개설 <span class="draft">예시</span></span></li>
-      </ul>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -441,68 +276,6 @@ section.page{border-top:0}
   window.addEventListener('resize',draw);
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
   new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-})();
-</script>
-
-<script>
-(function(){
-  const P=[{"t":"JM Lee, DR Bassett Jr, DL Thompson, EC Fitzhugh. Validation of the Cosmed Fitmate for prediction of maximal oxygen consumption. Journal of Strength and Conditioning Research 25(9), 2573-2579.","y":2011,"s":"pub","c":1},{"t":"JM Lee, Y Kim, GJ Welk. TRACK IT: Validity and utility of consumer-based physical activity monitors. ACSM's Health & Fitness Journal 18(4), 16-21.","y":2014,"s":"pub"},{"t":"Y Kim, JM Lee, K Laurson, Y Bai, GA Gaesser, GJ Welk. Accuracy of neck circumference in classifying overweight and obese US children. ISRN Obesity 2014, 781841.","y":2014,"s":"pub"},{"t":"Y Kim, JM Lee, BP Peters, GA Gaesser, GJ Welk. Examination of different accelerometer cut-points for assessing sedentary behaviors in children. PLoS ONE 9(4), e90630.","y":2014,"s":"pub"},{"t":"S Chen, X Zhu, GJ Welk, Y Kim, JM Lee, NF Meier. Using Sensewear armband and diet journal to promote adolescents' energy balance knowledge and motivation. Journal of Sport and Health Science 3(4), 326-332.","y":2014,"s":"pub"},{"t":"JM Lee, Y Kim, GJ Welk. Validity of consumer-based physical activity monitors. Medicine & Science in Sports & Exercise 46(9), 1840-1848.","y":2014,"s":"pub","c":1},{"t":"MA Calabró, JM Lee, PF Saint-Maurice, H Yoo, GJ Welk. Validity of physical activity monitors for assessing lower intensity activity in adults. International Journal of Behavioral Nutrition and Physical Activity 11, 119.","y":2014,"s":"pub","c":1},{"t":"JM Lee, Y Kim, YS Kwon, TR Derrick, GJ Welk. Feasibility of calibrating smartphone to access physical activity. 한국체육측정평가학회지 17(3), 49-63.","y":2015,"s":"pub"},{"t":"HS An, JM Lee, SK Kang. Validation of the iHealth-BP7 and Withings-BP800 blood pressure monitor for self-measurement according to the European Society of Hypertension International Protocol revision 2010. 한국체육측정평가학회지 18(3), 13-22.","y":2016,"s":"pub"},{"t":"JM Lee, PF Saint-Maurice, Y Kim, GA Gaesser, GJ Welk. Activity energy expenditure in youth: Sex, age, and body size patterns. Journal of Physical Activity and Health 13(s1), S62-S70.","y":2016,"s":"pub"},{"t":"Y Bai, GJ Welk, YH Nam, JA Lee, JM Lee, Y Kim, NF Meier, PM Dixon. Comparison of consumer and research monitors under semistructured settings. Medicine & Science in Sports & Exercise 48(1), 151-158.","y":2016,"s":"pub"},{"t":"Y Kim, SE Crouter, JM Lee, PM Dixon, GA Gaesser, GJ Welk. Comparisons of prediction equations for estimating energy expenditure in youth. Journal of Science and Medicine in Sport 19(1), 35-40.","y":2016,"s":"pub"},{"t":"W Byun, A Barry, JM Lee. Energy expenditure of daily living activities in 3- to 6-year-old children. Journal of Physical Activity and Health 13(s1), S3-S6.","y":2016,"s":"pub","c":1},{"t":"DM Dinkel, JM Lee, C Schaffer. Examining the knowledge and capacity of elementary teachers to implement classroom physical activity breaks. International Electronic Journal of Elementary Education 9(1), 182-196.","y":2016,"s":"pub"},{"t":"SE Stahl, HS An, DM Dinkel, JM Noble, JM Lee. How accurate are the wrist-based heart rate monitors during walking and running activities? Are they accurate enough? BMJ Open Sport & Exercise Medicine 2(1), e000106.","y":2016,"s":"pub","c":1},{"t":"JM Lee, Y Kim, Y Bai, GA Gaesser, GJ Welk. Validation of the SenseWear mini armband in children during semi-structured activity settings. Journal of Science and Medicine in Sport 19(1), 41-45.","y":2016,"s":"pub","c":1},{"t":"DM Bhammar, BJ Sawyer, WJ Tucker, JM Lee, GA Gaesser. Validity of SenseWear Armband v5.2 and v2.2 for estimating energy expenditure. Journal of Sports Sciences 34(19), 1830-1838.","y":2016,"s":"pub"},{"t":"HS An, Y Kim, JM Lee. Accuracy of inclinometer functions of the activPAL and ActiGraph GT3X+: A focus on physical activity. Gait & Posture 51, 174-180.","y":2017,"s":"pub","c":1},{"t":"IH Youn, JH Youn, JM Lee, CS Kim. Anomaly event detection for sit-to-stand transition recognition to improve mariner physical activity classification during a sea voyage. Biomedical Research 28(15), S588-S591.","y":2017,"s":"pub"},{"t":"SM Brooke, HS An, SK Kang, JM Noble, KE Berg, JM Lee. Concurrent validity of wearable activity trackers under free-living conditions. Journal of Strength and Conditioning Research 31(4), 1097-1106.","y":2017,"s":"pub","c":1},{"t":"HS An, GC Jones, SK Kang, GJ Welk, JM Lee. How valid are wearable physical activity trackers for measuring steps? European Journal of Sport Science 17(3), 360-368.","y":2017,"s":"pub","c":1},{"t":"Y Kim, JM Lee, J Kim, E Dhurandhar, G Soliman, NK Wehbi, J Canedy. Longitudinal associations between body mass index, physical activity, and healthy dietary behaviors in adults: A parallel latent growth curve modeling approach. PLoS ONE 12(3), e0173986.","y":2017,"s":"pub"},{"t":"IH Youn, JH Youn, JM Lee, T Song. Mariners' physical activity classification at sea using a wrist-worn wearable sensor. Biomedical Research 28 (Special Issue), S689-S693.","y":2017,"s":"pub"},{"t":"D Dinkel, C Schaffer, K Snyder, JM Lee. They just need to move: Teachers' perception of classroom physical activity breaks. Teaching and Teacher Education 63, 186-195.","y":2017,"s":"pub"},{"t":"K Snyder, JM Lee, A Bjornsen, D Dinkel. What gets them moving? College students' motivation for exercise: An exploratory study. Recreational Sports Journal 41(2), 111-124.","y":2017,"s":"pub"},{"t":"S Mettling, JM Lee, A Blount, D Dinkel. A needs assessment for physical activity programming based on the transtheoretical model. Recreational Sports Journal 42(2), 202-216.","y":2018,"s":"pub"},{"t":"K Snyder, C Schaffer, JM Lee, D Dinkel. Brain Blasters: An intervention to improve the utilization of classroom physical activity. SAGE Research Methods Cases.","y":2018,"s":"pub"},{"t":"W Byun, JM Lee, Y Kim, TA Brusseau. Classification accuracy of a wearable activity tracker for assessing sedentary behavior and physical activity in 3–5-year-old children. International Journal of Environmental Research and Public Health 15(4), 594.","y":2018,"s":"pub"},{"t":"JM Lee, W Byun, A Keill, D Dinkel, Y Seo. Comparison of wearable trackers' ability to estimate sleep. International Journal of Environmental Research and Public Health 15(6), 1265.","y":2018,"s":"pub","c":1},{"t":"W Byun, JM Lee, Y Bai, Y Kim. Epidemiological research in physical activity and sedentary behaviors (Editorial). BioMed Research International 2018, 3527439.","y":2018,"s":"pub"},{"t":"S Warehime, D Dinkel, K Snyder, JM Lee. Postpartum physical activity and sleep levels in overweight, obese and normal-weight mothers. British Journal of Midwifery 26(6), 400-408.","y":2018,"s":"pub"},{"t":"GJ Welk, Y Bai, JM Lee, J Godino, PF Saint-Maurice, L Carr. Standardizing analytic methods and reporting in activity monitor validation studies. Medicine & Science in Sports & Exercise 51(8), 1767-1780.","y":2019,"s":"pub"},{"t":"GA Soliman, J Kim, JM Lee, R High, S Hortman, Y Kim, NK Wehbi, J Canedy. Wellness programme at the workplace promotes dietary change and improves health indicators in a longitudinal retrospective study. Public Health Nutrition 22(2), 354-362.","y":2019,"s":"pub"},{"t":"S Kang, Y Kim, W Byun, JS Suk, JM Lee. Comparison of a wearable tracker with ActiGraph for classifying physical activity intensity and heart rate in children. International Journal of Environmental Research and Public Health 16(15), 2663.","y":2019,"s":"pub","c":1},{"t":"MW Seo, JM Lee, HC Jung, SW Jung, JK Song. Effects of various work-to-rest ratios during high-intensity interval training on athletic performance in adolescents. International Journal of Sports Medicine 40(8), 503-510.","y":2019,"s":"pub"},{"t":"MW Seo, JK Song, HC Jung, SW Kim, JH Kim, JM Lee. The associations of vitamin D status with athletic performance and blood-borne markers in adolescent athletes: A cross-sectional study. International Journal of Environmental Research and Public Health 16(18), 3422.","y":2019,"s":"pub","c":1},{"t":"서명원, 이정민, 송종국, 전민우, 정현철. 경기용 품새와 자유 품새의 운동 강도, 신체활동량 및 품새 경기 중 혈중 젖산 농도 분석. 국기원 태권도연구 10(3), 101-117.","y":2019,"s":"pub"},{"t":"이광희, 김재명, 최지엽, 이정민, 이미영. 기계학습을 적용한 신체활동 웨어러블 디바이스의 정확성 검증. 한국체육측정평가학회지 21(3), 37-46.","y":2019,"s":"pub"},{"t":"Y Kim, JM Lee, E Wellsandt, AB Rosen. Comparison of shoulder range of motion, strength, and upper quarter dynamic balance between NCAA Division I overhead athletes with and without a history of shoulder injury. Physical Therapy in Sport 42, 53-60.","y":2020,"s":"pub"},{"t":"MW Seo, Y Kim, HC Jung, JH Kim, JM Lee. Does online social connectivity promote physical activity in a wearable tracker-based intervention? A pilot randomized controlled study. Sustainability 12(21), 8803.","y":2020,"s":"pub","c":1},{"t":"JH Park, MW Seo, HC Jung, JM Lee. Let's live healthier: The relationship between suicidal behavior and physical activity in an age-, gender-, and body mass index-matched adults. International Journal of Environmental Research and Public Health 17(22), 8350.","y":2020,"s":"pub","c":1},{"t":"J Wang, EM Mannen, SF Siddicky, JM Lee, LD Latt. Gait alterations in posterior tibial tendonitis: A systematic review and meta-analysis. Gait & Posture 76, 28-38.","y":2020,"s":"pub"},{"t":"IH Youn, JM Lee. Seafarers' physical activity and sleep patterns: Results from Asia-Pacific sea routes. International Journal of Environmental Research and Public Health 17(19), 7266.","y":2020,"s":"pub","c":1},{"t":"S Kang, JH Park, MW Seo, HC Jung, YI Kim, JM Lee. Validity of the portable ultrasound BodyMetrix BX-2000 for measuring body fat percentage. Sustainability 12(21), 8786.","y":2020,"s":"pub","c":1},{"t":"M Lee, JH Park, MW Seo, SK Kang, JM Lee. A new equation to estimate energy expenditure using heart rate in children. Sustainability 13(9), 5092.","y":2021,"s":"pub","c":1},{"t":"JH Park, MW Seo, HC Jung, JK Song, JM Lee. Association between health-related physical fitness and respiratory diseases in adolescents: An age- and gender-matched study. International Journal of Environmental Research and Public Health 18(12), 6655.","y":2021,"s":"pub","c":1},{"t":"JH Park, E Yoo, MW Seo, HC Jung, JM Lee. Association between physical activity and respiratory diseases in adolescents: An age- and gender-matched study. International Journal of Environmental Research and Public Health 18(4), 1397.","y":2021,"s":"pub","c":1},{"t":"JH Park, Y Kim, GJ Welk, P Silva, JM Lee. Association with temperature variability and physical activity, sedentary behavior, and sleep in a free-living population. International Journal of Environmental Research and Public Health 18(24), 13077.","y":2021,"s":"pub","c":1},{"t":"MW Seo, SW Jung, SW Kim, JM Lee, HC Jung, JK Song. Effects of 16 weeks of resistance training on muscle quality and muscle growth factors in older adult women with sarcopenia: A randomized controlled trial. International Journal of Environmental Research and Public Health 18(13), 6762.","y":2021,"s":"pub"},{"t":"JS Kim, JP Choe, JH Park, E Yoo, JM Lee. The comparison of physical activity, sedentary behavior, and mental health between early menopausal women and age-matched general middle-aged women. International Journal of Environmental Research and Public Health 18(14), 7256.","y":2021,"s":"pub","c":1},{"t":"AB Alansare, J Hayman, JM Lee, MW Seo, D Yoo, HC Jung. The efficacy of a calamansi-containing energy drink on running performance and recovery in NCAA Division I middle-distance runners: A preliminary study. International Journal of Environmental Research and Public Health 18(21), 11023.","y":2021,"s":"pub"},{"t":"E Yoo, JH Park, JM Lee. The experience and meaning of media to non-mainstream athletes: Qualitative study. Sustainability 13(3), 1154.","y":2021,"s":"pub","c":1},{"t":"HC Jung, H Straltsova, MA Woodgate, KM Kim, JM Lee, JH Lee, JJ Gann. Water ski injuries and chronic pain in collegiate athletes. International Journal of Environmental Research and Public Health 18(8), 3939.","y":2021,"s":"pub"},{"t":"JH Park, E Yoo, Y Kim, JM Lee. What happened pre- and during COVID-19 in South Korea? Comparing physical activity, sleep time, and body weight status. International Journal of Environmental Research and Public Health 18(11), 5863.","y":2021,"s":"pub","c":1},{"t":"JP Choe, JS Kim, JH Park, E Yoo, JM Lee. When do individuals get more injured? Relationship between physical activity intensity, duration, participation mode, and injury. International Journal of Environmental Research and Public Health 18(20), 10855.","y":2021,"s":"pub","c":1},{"t":"양세종, 박정희, 정현철, 김정현, 이정민. 웨어러블 인솔 센서의 보행 수 측정 타당도 검증. 한국체육측정평가학회지, 45-54.","y":2021,"s":"pub","c":1},{"t":"김나혜, 박정희, 서명원, 전정우, 이정민. 정상체중 청소년들의 체중조절시도방법과 스트레스, 우울 및 자살행동과의 관계. 한국체육학회지 60(2).","y":2021,"s":"pub","c":1},{"t":"서명원, 이정민, 정현철, 김준영, 송종국. 가속도계를 이용한 한국인들의 신체활동수준과 심혈관 대사 질환 요인 및 대사증후군과의 관계: 2014-2016 국민건강영양조사를 활용하여. 체육과학연구, 543-553.","y":2022,"s":"pub"},{"t":"IW Hwang, JP Choe, JH Park, JM Lee. Association between physical activity, sedentary behavior, satisfaction with sleep fatigue recovery and smartphone dependency among Korean adolescents: An age- and gender-matched study. International Journal of Environmental Research and Public Health 19(23), 16034.","y":2022,"s":"pub","c":1},{"t":"NH Kim, JM Lee, SH Yang, JM Lee. Association between smartphone overdependency and mental health in Korean adolescents during the COVID pandemic; age- and gender-matched study. Frontiers in Public Health 10, 1056693.","y":2022,"s":"pub","c":1},{"t":"JS Kim, KM Kim, E Chang, HC Jung, JM Lee, AR Needle. Conduction velocity of spinal reflex in patients with acute lateral ankle sprain. Healthcare 10(9), 1794.","y":2022,"s":"pub"},{"t":"NH Kim, JM Lee, E Yoo. How the COVID-19 pandemic has changed adolescent health: Physical activity, sleep, obesity, and mental health. International Journal of Environmental Research and Public Health 19(15), 9224.","y":2022,"s":"pub"},{"t":"MW Seo, JM Lee, HC Jung, JY Kim, JK Song. Identification of the optimal HIIT protocol for fatigue resistance in adolescent athletes: A randomized controlled trial. Kinesiology 54(2), 256-267.","y":2022,"s":"pub"},{"t":"Y Kim, J Kim, JM Lee, DC Seo, HC Jung. Intergenerational taekwondo program: A narrative review and practical intervention proposal. International Journal of Environmental Research and Public Health 19(9), 5247.","y":2022,"s":"pub"},{"t":"JH Park, HC Jung, YS Jung, JK Song, JM Lee. Re-visiting maximal heart rate prediction using cross-validation in population aged 7–55 years. International Journal of Environmental Research and Public Health 19(14), 8509.","y":2022,"s":"pub","c":1},{"t":"JS Kim, KM Kim, E Chang, HC Jung, JM Lee, AR Needle. Spinal reflex excitability of lower leg muscles following acute lateral ankle sprain: Bilateral inhibition of soleus spinal reflex excitability. Healthcare 10(7), 1171.","y":2022,"s":"pub"},{"t":"JH Sung, JM Lee, JH Kim. The effectiveness of ultrasound deep heat therapy for adhesive capsulitis: A systematic review and meta-analysis. International Journal of Environmental Research and Public Health 19(3), 1859.","y":2022,"s":"pub"},{"t":"서명원, 송종국, 이정민, 정현철. 가속도계로 측정된 중⋅고강도 신체활동 수준이 한국 노인들의 심혈관 대사 및 골 관련 질환에 미치는 영향: 2017 국민건강영양조사를 이용하여. 한국체육측정평가학회지 24(4), 189-200.","y":2022,"s":"pub"},{"t":"J Kim, IW Hwang, JH Park, Y Kim, JM Lee. Effects of COVID-19 outbreak on Korean adolescents: Impact of altered economic perception on physical activity, sedentary behavior, and stress levels in an age-, gender-, and BMI-matched study. PLoS ONE 18(11), e0294270.","y":2023,"s":"pub","c":1},{"t":"D Yang, SH Yang, JM Lee, J Kim. Effects of socioeconomic status on physical activity and cardiovascular diseases prior to and during the COVID-19 pandemic in the older adults. Frontiers in Public Health 11, 1241027.","y":2023,"s":"pub"},{"t":"JY Shin, JM Lee, YH Nam. Factors affecting decreased physical activity during the COVID-19 pandemic: An age-, gender-, and body mass index-matched study. Frontiers in Public Health 11, 1170049.","y":2023,"s":"pub"},{"t":"MW Seo, J Gann, JM Lee, KS Heffernan, JY Kim, HC Jung. Potential impact of metabolic syndrome on cognitive function in US firefighters. Frontiers in Public Health 11, 1150121.","y":2023,"s":"pub"},{"t":"MW Seo, JM Lee, HC Jung. Prevalence of combined metabolic health and weight status by various diagnosis criteria and association with cardiometabolic disease in Korean adults. Obesity Research & Clinical Practice 17(2), 137-143.","y":2023,"s":"pub"},{"t":"정형웅, 고현서, 이정민, 송종국, 정현철. 부모의 신체활동 참여가 아동의 Physical Literacy에 미치는 영향. 한국체육측정평가학회지.","y":2023,"s":"pub"},{"t":"정형웅, 박태영, 송종국, 이정민, 정현철. 아동의 스포츠 활동 참여 유형이 Physical Literacy와 인지기능에 미치는 영향. 한국체육학회지, 241-254.","y":2023,"s":"pub"},{"t":"박인식, 박정희, 정현철, 김정현, 이정민. 유착성 관절낭염 환자의 건강개선을 위한 탄성밴드 운동프로그램 효과 검증. Journal of Sport and Leisure Studies 92, 399-408.","y":2023,"s":"pub","c":1},{"t":"KR Hong, IW Hwang, HJ Kim, SH Yang, JM Lee. Apple Watch 6 vs. Galaxy Watch 4: A validity study of step-count estimation in daily activities. Sensors 24(14), 4658.","y":2024,"s":"pub","c":1},{"t":"JH Shen, IW Hwang, JP Choe, SJ Hwang, JY Kim, JM Lee. Association of early-onset diabetes with socioeconomic, and health factors: A matched case-control study controlling for age, gender, and BMI. Journal of Diabetes & Metabolic Disorders 24(1), 14.","y":2024,"s":"pub","c":1},{"t":"JP Choe, IW Hwang, JH Park, C Amo, JM Lee. How valid is the commercially available tennis match analysis mobile application? Is it good enough? International Journal of Performance Analysis in Sport 24(1), 58-73.","y":2024,"s":"pub","c":1},{"t":"JH Park, JP Choe, J Kim, IW Hwang, JM Lee. Investigating the influence of working status changes on physical activity and non-communicable diseases in Korean middle-aged and older adults: Insights from a longitudinal panel study. BMC Public Health 24(1), 3597.","y":2024,"s":"pub","c":1},{"t":"D Yang, JM Lee, SH Yang, KH Cho, J Kim. Socioeconomic status and physical activity disparities in older adults: Implications for COVID-19 related diabetes cognitive dysfunction. Preventive Medicine Reports 43, 102772.","y":2024,"s":"pub"},{"t":"J Kim, J Kenyon, H Billingsley, N Bohmke, SI Ahmed, H Salmons, JM Lee, D Kirkman, S Carbone, Y Kim. Validity of the ActiGraph GT9X accelerometer for measuring steps and energy expenditures in heart failure patients. PLoS ONE 19(12), e0315575.","y":2024,"s":"pub"},{"t":"XL Wen, IW Hwang, JH Shen, HJ Kim, KR Hong, JM Lee. Crossing cultures, gaining weight? A multidimensional analysis of health behaviors in Chinese students overseas. Healthcare 13(21), 2804.","y":2025,"s":"pub","c":1},{"t":"JH Park, T Prochnow, ML Smith, JM Lee, C Amo. Effects of exercise on balance, gait speed, quality of life, and symptom relief among older adults with Parkinson's disease: A meta-analysis of randomized controlled trials (RCTs). Healthcare 13(17), 2212.","y":2025,"s":"pub"},{"t":"HJ Kim, IW Hwang, KR Hong, HY Chung, JM Lee. Exploring the interplay between BMI, subjective body image perception, and health behaviors: A cross-sectional study. PLoS ONE 20(8), e0328283.","y":2025,"s":"pub","c":1},{"t":"IW Hwang, SJ Hwang, JH Shen, J Kim, JM Lee. How does the weekend catch-up sleep ratio affect the health and lifestyle of Korean adults? An age- and sex-matched study. Measurement in Physical Education and Exercise Science 29(3), 336-347.","y":2025,"s":"pub","c":1},{"t":"채주원, 김호준, 이정민. K-fold 교차검증을 활용한 13-55세 한국인 대상 VO₂max 예측방정식 개발 및 검증. 한국체육측정평가학회지 27(2), 1-16.","y":2025,"s":"pub","c":1},{"t":"S Feng, JH Park, Q Zhang, P Ma, JM Lee, JC Shin. The associations between sleep duration and various metabolic health indices among adults in the United States: A multivariate analysis of variance (MANOVA) using National Health and Nutrition Examination Survey (NHANES) 2021 to 2023 dataset. Journal of Primary Care & Community Health 16, 1-8.","y":2025,"s":"pub"},{"t":"J Kim, KR Hong, IW Hwang, X Wen, JH Shen, HJ Kim, J Kenyon, J Geller, RK Evans, JM Lee, Y Kim. The validity of the V̇O₂ Master Pro for measuring oxygen consumption during sedentary activity and treadmill walking and jogging. Applied Physiology, Nutrition, and Metabolism 50, 1-11.","y":2025,"s":"pub"},{"t":"민혜원, 정해영, 조경훈, 양서형, 이정민. 무용 전공자의 MBTI 성격 유형에 따른 무용 수행 불안과 회복탄력성의 차이 분석. 한국사회체육학회지 102, 389-399.","y":2025,"s":"pub","c":1},{"t":"JH Park, T Prochnow, JM Lee, T Roh. Impact of physical activity on smoking, sleep disorders, and depression among US adults. Health Education & Behavior.","y":2025,"s":"pub"},{"t":"MJ Yang, JH Shen, JM Lee. Cardiometabolic risk factors and lifestyle characteristics by age strata in middle-aged men: Focus on stress, sleep, and physical activity. Journal of Sport and Applied Science 10(1), 25-29.","y":2026,"s":"pub","c":1},{"t":"HU Jung, HR Park, JM Lee, HC Jung. Differences in health literacy and health-promoting behaviors by gender and sport type in collegiate athletes. Frontiers in Public Health 14, 1776062.","y":2026,"s":"pub"},{"t":"B Ku, JM Lee, J Haegele. Exploring differences in conceptual models of general self-efficacy between employed and nonemployed adults with physical impairments. Journal of Health Psychology.","y":2026,"s":"pub"},{"t":"SJ Hwang, IW Hwang, JP Choe, JH Shen, JM Lee. Health benefits of family visits for older Korean women living alone. Family Relations.","y":2026,"s":"pub","c":1},{"t":"SH Nam, M Jeong, HC Jung, JM Lee, KM Kim. Higher visual reliance during single-leg balance in female dancers: Traditional center-of-pressure and time-to-boundary approaches. Journal of Motor Behavior 58(3), 350-360.","y":2026,"s":"pub"},{"t":"HJ Kim, KR Hong, XL Wen, DS Kim, JM Lee. Impact of physical activity and frailty on mortality and utilization among middle-aged and older adults in South Korea. The Journal of Frailty & Aging 15(2), 100142.","y":2026,"s":"pub","c":1},{"t":"IW Hwang, JH Shen, JP Choe, KM Kim, JM Lee. Impact of overnight work on lifestyle and cardiometabolic risk factors: A study on employee health in Korean. Biological Rhythm Research, 1-14.","y":2026,"s":"pub","c":1},{"t":"IW Hwang, HY Chung, D Yang, HH Lee, JM Lee. Income as a moderator of physical activity's impact on mental health: Insights from the Korean Health Panel Study II. Journal of Physical Activity and Health 23(8), 1150-1158.","y":2026,"s":"pub","c":1},{"t":"이정민. AI 시대 스포츠 애널리틱스와 체육측정평가의 확장 가능성 및 과제. 한국체육측정평가학회지 28(3), 15-26.","y":2026,"s":"pub","c":1}];
-  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const me=/(\bJM Lee\b|이정민)/g;
-  let state={s:'pub',y:null,q:''};
-  const inState=p=>state.s==='review'?p.s==='review':p.s!=='review';
-  
-  function bars(){
-    const el=document.getElementById('yearbars');
-    const set=P.filter(inState), ys=[...new Set(P.filter(p=>p.s!=='review').map(p=>p.y))].sort();
-    if(state.s==='review') ys.splice(0,ys.length,...[...new Set(set.map(p=>p.y))]);
-    const cnt=y=>set.filter(p=>p.y===y).length, max=Math.max(...ys.map(cnt),1);
-    el.style.setProperty('--n',ys.length);
-    el.innerHTML=ys.map(y=>`<button type="button" class="yb${state.y===y?' on':''}" data-y="${y}" aria-pressed="${state.y===y}" aria-label="${y}년 ${cnt(y)}편"><b>${cnt(y)}</b><i style="height:${cnt(y)/max*100}%"></i></button>`).join('');
-    let lab=document.getElementById('yearlab');
-    if(!lab){lab=document.createElement('div');lab.id='yearlab';lab.className='yearlab';el.after(lab)}
-    lab.style.setProperty('--n',ys.length);
-    lab.innerHTML=ys.map(y=>`<span>'${String(y).slice(2)}</span>`).join('');
-    el.querySelectorAll('.yb').forEach(b=>b.onclick=()=>{const y=+b.dataset.y;state.y=state.y===y?null:y;render()});
-  }
-  function render(){
-    bars();
-    const q=state.q.trim().toLowerCase();
-    const list=P.filter(p=>inState(p)&&(state.y===null||p.y===state.y)&&(!q||p.t.toLowerCase().includes(q)));
-    const ys=[...new Set(list.map(p=>p.y))].sort((a,b)=>b-a);
-    const hl=(t,c)=>{let h=esc(t).replace(me,c?'<b>$1*</b>':'<b>$1</b>');
-      if(q){const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');h=h.replace(/(<[^>]+>)|([^<]+)/g,(m,tag,txt)=>tag||txt.replace(re,'<mark>$1</mark>'))}
-      return h};
-    document.getElementById('pub-list').innerHTML=ys.map(y=>{
-      const g=list.filter(p=>p.y===y);
-      return `<div class="ygroup"><h4>${y}<span>${g.length}편</span></h4><ol class="full">${g.map(p=>`<li>${hl(p.t,p.c)}${p.s==='press'?'<span class="badge">In press</span>':p.s==='review'?'<span class="badge">Under review</span>':''}</li>`).join('')}</ol></div>`}).join('')
-      || '<p style="margin-top:20px;color:var(--muted)">조건에 맞는 논문이 없습니다. 검색어나 연도 선택을 바꿔 보세요.</p>';
-    const parts=['게재'];
-    if(state.y) parts.push(state.y+'년');
-    if(q) parts.push('"'+state.q.trim()+'"');
-    document.getElementById('pub-status').textContent=parts.join(' · ')+' · '+list.length+'편'+(state.y?' (연도를 다시 누르면 전체 보기)':'');
-  }
-  document.getElementById('pub-q').addEventListener('input',e=>{state.q=e.target.value;render()});
-  render();
-})();
-</script>
-<script>
-(function(){
-  const ids=['about','research','projects','publications','team','notice'];
-  const links=[...document.querySelectorAll('.nav nav a[href^="#"]')];
-  function show(){
-    let id=location.hash.slice(1);
-    if(!ids.includes(id)) id='about';
-    ids.forEach(i=>document.getElementById(i).classList.toggle('on',i===id));
-    links.forEach(a=>a.getAttribute('href')==='#'+id?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
-    window.scrollTo(0,0);
-    if(id==='about') window.dispatchEvent(new Event('resize'));
-  }
-  document.querySelector('.brand').setAttribute('href','#about');
-  window.addEventListener('hashchange',show);
-  if('scrollRestoration' in history) history.scrollRestoration='manual';
-  show();
-  window.addEventListener('load',()=>window.scrollTo(0,0));
 })();
 </script>
 </body>

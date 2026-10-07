@@ -20,3 +20,10 @@ Static site for GitHub Pages. No build step.
 ## Updating
 - Add a photo: save a square JPG into `images/` and replace the `<span class="av">..</span>` placeholder next to the person's name with `<img class="av" src="images/<file>.jpg" alt="<Name>">`.
 - Add a paper: in `index.html`, find `const P=[` and add an entry `{"t":"Authors. Title. Journal.","y":2026,"s":"pub","c":1}` (`c:1` marks corresponding author).
+
+## Page structure (2026-10-08)
+Each menu item is its own HTML file, in both languages:
+index.html (About), research.html, projects.html, publications.html, team.html, news.html.
+Korean versions have the same file names inside `ko/`.
+Edit the file for the section you are changing (e.g. team.html and ko/team.html for member changes).
+The header, styles, and footer are repeated in every file, so a change to those must be made in all 12 files.
