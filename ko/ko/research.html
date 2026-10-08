@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>연구 · PAHP Lab · 경희대학교</title>
+<meta name="description" content="Physical Activity & Health Promotion Lab, Department of Physical Education, Kyung Hee University. Wearable measurement, 24-hour movement behaviors, and physical activity epidemiology.">
+<meta property="og:title" content="경희대학교 신체활동과 건강증진 실험실">
+<meta property="og:description" content="Kyung Hee University · Wearable measurement, 24-hour movement behaviors, and physical activity epidemiology.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../images/jung-min-lee.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long page, sticky nav, hero = a real 1,440-minute accelerometer day; sections in a 12-col grid that stacks on phones */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#15201c; --muted:#5a6863; --line:#d7dedb;
+  --accent:#9b1c31;            /* Kyung Hee crimson */
+  --sed:#c9d3cf; --lpa:#5f9e95; --mvpa:#9b1c31; --sleep:#2d3f5c;
+  --draft-bg:#fff4d6; --draft-fg:#6b4e00;
+  --f-display:"Bricolage Grotesque","IBM Plex Sans KR",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101614; --surface:#18201d; --ink:#e6ece9; --muted:#9aa8a3; --line:#2b3632;
+  --accent:#e0566c; --sed:#3a4743; --lpa:#6fb5ab; --mvpa:#e0566c; --sleep:#7d93bd;
+  --draft-bg:#3a3014; --draft-fg:#f3d98a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101614; --surface:#18201d; --ink:#e6ece9; --muted:#9aa8a3; --line:#2b3632;
+  --accent:#e0566c; --sed:#3a4743; --lpa:#6fb5ab; --mvpa:#e0566c; --sleep:#7d93bd;
+  --draft-bg:#3a3014; --draft-fg:#f3d98a; color-scheme:dark}
+
+*{box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+.draft{background:var(--draft-bg);color:var(--draft-fg);font-size:.72rem;font-family:var(--f-mono);padding:1px 7px;border-radius:3px;white-space:nowrap;vertical-align:middle}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:row;align-items:center;gap:10px;text-decoration:none;line-height:1.2}
+.brand .brand-t{display:flex;flex-direction:column;color:var(--ink);font-size:inherit}
+.seal{display:block;height:40px;width:auto}
+.seal-foot{display:block;height:84px;width:auto;margin-bottom:14px}
+.seal-d{display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seal-l{display:none!important}:root:not([data-theme="light"]) .seal-d{display:block!important}}
+:root[data-theme="dark"] .seal-l{display:none!important}
+:root[data-theme="dark"] .seal-d{display:block!important}
+.brand b{font-family:var(--f-display);font-size:1.05rem}
+.brand span{font-size:.75rem;color:var(--muted)}
+.nav ul{display:flex;gap:4px 18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{text-decoration:none;font-size:.9rem;color:var(--muted)}
+.nav ul a:hover{color:var(--accent)}
+.nav .lang{border:1px solid var(--line);border-radius:99px;padding:1px 10px;color:var(--ink)}
+
+/* hero */
+.hero{padding-block:56px 40px}
+.hero h1{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:700;letter-spacing:-.02em;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{max-width:62ch;margin-top:18px;color:var(--muted);font-size:1.05rem}
+.day{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 14px}
+.day-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.day canvas{display:block;width:100%;height:150px;margin-top:12px}
+.axis{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.7rem;color:var(--muted);margin-top:4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:12px;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.legend b{color:var(--ink);font-weight:600}
+
+section{padding-block:64px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;align-items:end;margin-bottom:36px}
+.sec-head p{color:var(--muted);max-width:60ch}
+
+/* research */
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.theme{background:var(--surface);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.theme .mono{color:var(--accent)}
+.theme p{color:var(--muted);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{font-size:.75rem;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--muted)}
+
+/* projects */
+.proj{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.proj li{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:16px;padding-block:16px;border-bottom:1px solid var(--line);align-items:baseline}
+.proj li:first-child{border-top:1px solid var(--line)}
+.proj .src{font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
+.proj .st{font-size:.72rem;font-family:var(--f-mono);padding:2px 8px;border-radius:99px;border:1px solid currentColor}
+.st.on{color:var(--lpa)} .st.done{color:var(--muted)}
+.sub{margin-top:30px;margin-bottom:10px}
+
+/* publications */
+.pubs{list-style:none;margin:0;padding:0;counter-reset:p}
+.pubs li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding-block:14px;border-bottom:1px solid var(--line)}
+.pubs .yr{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--accent);font-weight:500}
+.pubs .au{color:var(--muted);font-size:.9rem}
+.pubs .au u{text-decoration:none;color:var(--ink);font-weight:600}
+.pubs .jr{font-size:.9rem;color:var(--muted)}
+.pubs .jr em{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 4px}
+.stats div{background:var(--surface);padding:16px 18px}
+.stats dt{font-size:.8rem;color:var(--muted)}
+.stats dd{margin:2px 0 0;font-family:var(--f-display);font-size:1.9rem;font-weight:700;font-variant-numeric:tabular-nums}
+.stats small{font-size:.9rem;margin-left:2px}
+.yearbars{display:grid;grid-template-columns:repeat(var(--n,14),minmax(0,1fr));gap:4px;align-items:end;height:130px;margin-top:8px;border-bottom:1px solid var(--line)}
+.yb{all:unset;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:3px}
+.yb i{display:block;width:100%;max-width:34px;background:var(--lpa);border-radius:3px 3px 0 0;min-height:3px;transition:background .15s}
+.yb b{font-family:var(--f-mono);font-size:.7rem;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.yb:hover i,.yb.on i{background:var(--accent)}
+.yb.on b{color:var(--accent)}
+.yb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.yearlab{display:grid;grid-template-columns:repeat(var(--n,14),minmax(0,1fr));gap:4px;font-family:var(--f-mono);font-size:.68rem;color:var(--muted);text-align:center;margin-top:4px;font-variant-numeric:tabular-nums}
+.pub-tools{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;margin-top:24px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:3px;background:var(--surface)}
+.seg button{all:unset;cursor:pointer;padding:6px 14px;border-radius:6px;font-size:.9rem;color:var(--muted)}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.seg button:focus-visible{outline:2px solid var(--accent)}
+.search{display:flex;align-items:center;gap:10px;flex:1 1 240px;max-width:380px}
+.search input{flex:1;min-width:0;font:inherit;font-size:.92rem;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.ygroup{margin-top:28px}
+.ygroup h4{font-family:var(--f-display);font-size:1.3rem;margin:0;display:flex;gap:10px;align-items:baseline}
+.ygroup h4 span{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);font-weight:400}
+.full{list-style:none;margin:8px 0 0;padding:0}
+.full li{padding-block:11px;border-bottom:1px solid var(--line);font-size:.93rem;color:var(--muted);line-height:1.6}
+.full li b{color:var(--ink);font-weight:600}
+.full .badge{font-family:var(--f-mono);font-size:.68rem;padding:1px 7px;border-radius:99px;border:1px solid var(--accent);color:var(--accent);margin-left:6px;white-space:nowrap}
+.full mark{background:var(--draft-bg);color:inherit}
+.links{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap}
+.btn{display:inline-flex;gap:6px;align-items:center;text-decoration:none;font-size:.9rem;border:1px solid var(--ink);border-radius:6px;padding:8px 14px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+
+/* team */
+.pi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px}
+.pi h3{font-size:1.6rem}
+.pi-photo{display:block;width:100%;max-width:150px;aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.pi dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px;margin:0;font-size:.92rem}
+.pi dt{color:var(--muted)} .pi dd{margin:0}
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 40px;margin-top:40px}
+.group.wide{grid-column:1/-1}
+.g-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.names{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0 16px}
+.names li{padding-block:12px;border-bottom:1px solid var(--line);font-size:1.02rem;font-weight:500}
+.alumni .names{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.names li.m{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;font-family:var(--f-mono);letter-spacing:.02em;border-radius:50%;flex:none;object-fit:cover;background:var(--sed);color:var(--muted);display:inline-grid;place-items:center;font-size:.95rem;font-weight:500}
+.alumni .names li{font-weight:500}
+.names .pos,.pi .pos{white-space:nowrap}
+.names .ko{font-size:.8rem;font-weight:400;color:var(--muted)}
+.names li.m small{display:block;font-size:.78rem;font-weight:400;color:var(--muted);margin-top:0}
+.names li small{display:block;font-size:.8rem;font-weight:400;color:var(--muted);line-height:1.4;margin-top:2px}
+@media (max-width:760px){.groups{grid-template-columns:1fr}}
+
+/* notice */
+.notice{list-style:none;margin:0;padding:0}
+.notice li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding-block:14px;border-bottom:1px solid var(--line)}
+.notice time{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;font-size:.9rem}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:28px}
+footer p+p{margin-top:4px}
+footer .muted{color:var(--muted)}
+
+@media (max-width:760px){
+  .sec-head,.pi,footer .wrap{grid-template-columns:1fr}
+  .proj li{grid-template-columns:1fr;gap:4px}
+  .pubs li,.notice li{grid-template-columns:1fr;gap:2px}
+  .pi dl{grid-template-columns:90px minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+main>section{border-top:0}
+.nav nav a[aria-current="page"]{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="seal seal-l" src="../images/khu-seal-red.png?v=1008b" alt="경희대학교 휘장"><img class="seal seal-d" src="../images/khu-seal-silver.png?v=1008b" alt=""><span class="brand-t"><b>신체활동과 건강증진 실험실</b><span>Physical Activity &amp; Health Promotion Lab</span></span></a>
+    <nav aria-label="주요 메뉴"><ul>
+      <li><a href="index.html">소개</a></li>
+      <li><a href="research.html" aria-current="page">연구</a></li>
+      <li><a href="projects.html">과제</a></li>
+      <li><a href="publications.html">논문</a></li>
+      <li><a href="team.html">구성원</a></li>
+      <li><a href="news.html">소식</a></li>
+      <li><a href="../research.html" lang="en" class="lang">EN</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="mono">Research</p><h2>연구 분야</h2></div>
+        <p>측정 방법론에서 출발해 인구집단 건강 연구와 스포츠 데이터 분석으로 이어집니다. 모든 주제의 공통 질문은 "이 측정값을 얼마나 믿을 수 있는가"입니다.</p>
+      </div>
+      <div class="themes">
+        <article class="theme">
+          <span class="mono">Measurement validity</span>
+          <h3>웨어러블 기기 타당도·신뢰도</h3>
+          <p>소비자용 활동량계, 스마트워치, 스마트폰이 측정한 걸음 수, 에너지 소비량, 수면을 기준 측정법과 비교합니다. 검증 연구의 분석·보고 표준화 작업에도 참여해 왔습니다.</p>
+          <div class="tags"><span>Fitbit</span><span>ActiGraph</span><span>스마트폰 보정</span><span>Bland–Altman</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Population health</span>
+          <h3>신체활동 역학</h3>
+          <p>국민건강영양조사, 한국인유전체역학조사(KoGES), 건강보험 노인코호트, 한국아동·청소년패널 등 국가 자료로 신체활동과 만성질환, 인지기능, 골절, 사망의 관련성을 연구합니다.</p>
+          <div class="tags"><span>KNHANES</span><span>KoGES</span><span>NHIS</span><span>KCYPS</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">24-hour behaviors</span>
+          <h3>24시간 움직임 행동과 일주기 리듬</h3>
+          <p>신체활동, 좌식시간, 수면을 하나의 하루로 묶어 봅니다. 가속도계 원자료로 활동 리듬과 수면 타이밍 지표를 산출하고 건강노화와의 관련성을 분석합니다.</p>
+          <div class="tags"><span>일주기 리듬</span><span>social jetlag</span><span>건강노화</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">스포츠 데이터 분석</span>
+          <h3>스포츠 데이터 분석</h3>
+          <p>프로야구 세이버메트릭스, 테니스 경기 기록, 스포츠 관심도 데이터를 측정평가 관점에서 분석합니다. 데이터 품질과 지표 신뢰도를 먼저 따집니다.</p>
+          <div class="tags"><span>KBO</span><span>MLB</span><span>테니스</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Fitness assessment</span>
+          <h3>체력 측정과 예측식 개발</h3>
+          <p>최대심박수, 최대산소섭취량, 에너지 소비량 예측식을 교차타당화로 개발하고, 경찰공무원 체력검사 같은 현장 검사 도구를 설계합니다.</p>
+          <div class="tags"><span>VO₂max</span><span>K-fold CV</span><span>체력검사</span></div>
+        </article>
+        <article class="theme">
+          <span class="mono">Reliability methods</span>
+          <h3>일반화가능도 이론과 D-study</h3>
+          <p>며칠, 몇 주를 관찰해야 안정적인 추정치를 얻을 수 있는지 G-theory로 분해합니다. 청소년 Fitbit 자료, 선수 웨어러블 데이터, 경기 기록 데이터에 적용합니다.</p>
+          <div class="tags"><span>G-theory</span><span>D-study</span><span>분산성분</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img class="seal-foot seal-l" src="../images/khu-seal-red-full.png?v=1008b" alt="경희대학교"><img class="seal-foot seal-d" src="../images/khu-seal-silver-full.png?v=1008b" alt="">
+      <p><b style="font-family:var(--f-display)">신체활동과 건강증진 실험실</b></p>
+      <p class="muted">경희대학교 체육대학 체육학과</p>
+      <p class="muted">지도교수 이정민</p>
+    </div>
+    <div>
+      <p class="mono">연락처</p>
+      <p>jungminlee@khu.ac.kr</p>
+      <p>031-201-2736</p>
+    </div>
+    <div>
+      <p class="mono">위치</p>
+      <p class="muted">경희대학교 국제캠퍼스 체육대학 413호</p>
+      <p class="muted">경기도 용인시 기흥구 덕영대로 1732, 17104</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
